@@ -1,4 +1,5 @@
 #include "nearestNeighbor.hpp"
+#include "TwoOpt.hpp"
 #include <iostream>
 #include <vector>
 #include <fstream>
@@ -35,6 +36,7 @@ int main(int argc, char* argv[])
 	std::vector<double> Tour;
 
 	nearestNeighbor(Cities, Tour, Cities.at(0)->at(0));
+	TwoOpt(Cities, Tour);
 
 	// Write results to file
 	std::string outfileName = std::string(argv[1]);
