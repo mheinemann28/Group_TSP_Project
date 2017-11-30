@@ -1,0 +1,21 @@
+CS 325 Project
+1st December 2017
+edwardse
+garouttc
+heinemam
+
+usage: ./tspSolver [datafile]  [-o]
+
+Use tspSolver to find an approximately optimized solution to a given TSP
+instance.
+
+positional arguments:
+  datafile    A path to the file containing the input data. Will default to
+              tsp_example_1.txt if not provided.
+
+optional arguments:
+  -o  Get a more optimized solution, at the cost of time.
+
+tspSolver assumes many things:
+    - An empty line signifies the end of data.
+    - Each line contains three numbers seperated by a space.  The first number on each line is a city identifier (like a name).  The second number is the city's x-coordinate and the third number is the city's y-coordinate.
