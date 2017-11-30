@@ -13,7 +13,7 @@ This will create an executable called tspSolver.
 Clean up by uttering:
 make clean
 
-usage: ./tspSolver [datafile]  [-o]
+usage: ./tspSolver [datafile]  [o]
 
 Use tspSolver to find an approximately optimized solution to a given TSP
 instance.
@@ -23,7 +23,7 @@ positional arguments:
               tsp_example_1.txt if not provided.
 
 optional arguments:
-  -o  Get a more optimized solution, at the cost of time.
+  o  Get a more optimized solution, at the cost of time.
 
 tspSolver assumes many things:
     - An empty line signifies the end of data.
