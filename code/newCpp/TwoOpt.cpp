@@ -1,3 +1,9 @@
+/******************************************************************************
+ * The following is the implementation of the TwoOpt and TwoOptSwap functions
+ * declared in TwoOpt.hpp. Please see the header file as well as the 
+ * tspSolver README for details about how to use them.
+******************************************************************************/
+
 #include "TwoOpt.hpp"
 #include <iostream>
 double calculateDistance(const std::vector<std::vector<int>*>& C, std::vector<long> T);
@@ -71,6 +77,7 @@ double calculateDistance(const std::vector<std::vector<int>*>& C, std::vector<lo
 		sum += round(sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2)));
 	}
 	
+	// Calculate distance from end city back to start city and add to sum
 	x1 = C.at(T.at(T.size() - 1))->at(1);
 	x2 = C.at(T.at(1))->at(1);
 	y1 = C.at(T.at(T.size() - 1))->at(2);
