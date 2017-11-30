@@ -1,5 +1,10 @@
-#include "nearestNeighbor.hpp"
+/******************************************************************************
+ * The following is the implementation of the nearestNeighbor function
+ * declared in nearestNeigbor.hpp. Please see the header file as well as the 
+ * tspSolver README for details about how to use it.
+******************************************************************************/
 
+#include "nearestNeighbor.hpp"
 
 void nearestNeighbor(std::vector< std::vector<int>* > C, std::vector<long>& T, int startPoint)
 {
