@@ -4,6 +4,15 @@ edwardse
 garouttc
 heinemam
 
+Make by uttering:
+make
+or
+make tspSolver
+This will create an executable called tspSolver.
+
+Clean up by uttering:
+make clean
+
 usage: ./tspSolver [datafile]  [-o]
 
 Use tspSolver to find an approximately optimized solution to a given TSP
