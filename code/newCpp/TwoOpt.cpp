@@ -9,14 +9,14 @@ void TwoOpt(const std::vector<std::vector<int>*>& C, std::vector<long>& T)
 
 	bool improve = true;
 
-	start:
 	while (improve)
 	{
 		double bestDistance = T.at(0);
 
 		for (int i = 1; i < T.size() - 1; i++)
 		{
-			std::cout << i << std::endl;
+			// Cout statement gives an idea of where the algorithm is at during runtime
+			//std::cout << i << std::endl;
 			for (int k = i + 1; k < T.size(); k++)
 			{
 				TwoOptSwap(T, newRoute, i, k);
@@ -29,7 +29,6 @@ void TwoOpt(const std::vector<std::vector<int>*>& C, std::vector<long>& T)
 					T = newRoute;
 					bestDistance = newDistance;
 					improve = true;
-					goto start;
 				}
 				else
 				{
