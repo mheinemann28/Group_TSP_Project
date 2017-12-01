@@ -16,6 +16,7 @@
 #include <vector>
 #include <fstream>
 #include <string>
+#include <chrono>
 
 int main(int argc, char* argv[])
 {
@@ -49,6 +50,9 @@ int main(int argc, char* argv[])
 		// Vector holds current solution to TSP
 		std::vector<long> Tour;
 
+		// UNCOMMENT TO START TIMING
+		//auto start = std::chrono::high_resolution_clock::now();
+		
 		// Run nearest neighbor approximation algorithm
 		nearestNeighbor(Cities, Tour, Cities.at(0)->at(0));
 	
@@ -60,7 +64,11 @@ int main(int argc, char* argv[])
 			TwoOpt(Cities, Tour);
 		}
 
-
+		// UNCOMMENT TO END TIMING
+		//auto end = std::chrono::high_resolution_clock::now();
+		//std::cout << std::chrono::duration_cast<std::chrono::duration<double>>(end - start).count() << " seconds\n";
+		
+		
 		// Write results to file
 		// Outfile name is original file name with ".tour" appended to the end
 		std::string outfileName = std::string(argv[1]);
